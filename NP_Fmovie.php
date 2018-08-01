@@ -42,8 +42,8 @@ class NP_Fmovie extends NucleusPlugin
 
 		$filename = $farray[0];
 		$text = $farray[1];
-		$width = (int) $farray[2];
-		$height = (int) $farray[3];
+		$width = isset($farray[2]) ? (int) $farray[2] : 0;
+		$height = isset($farray[3]) ? (int) $farray[3] : 0;
 
 		$searchdot = strrpos($filename,".");
 		$tail = substr($filename,$searchdot,strlen($filename)-$searchdot+1);
