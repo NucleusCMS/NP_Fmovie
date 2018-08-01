@@ -57,7 +57,7 @@ class NP_Fmovie extends NucleusPlugin
 				$media = $this->currentItem->authorid;
 			}
 			$media = '';
-			$media = htmlspecialchars($CONF['MediaURL']. $media);
+			$media = hsc($CONF['MediaURL']. $media);
 			$out = <<<EOD
 <script language="JavaScript">writeFlash('$blog','$media','$filename','$width','$height')</script>
 EOD;
