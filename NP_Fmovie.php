@@ -29,8 +29,11 @@ class NP_Fmovie extends NucleusPlugin
 		echo '<script language="JavaScript" src="'.$this->getAdminURL().'mov.js"></script>';
 	}
 
-	function event_PreItem($data) { 
-		$this->currentItem = &$data["item"]; 
+	function event_PreItem($data) {
+		
+		if(!isset($data['item'])) return;
+		
+		$this->currentItem = &$data['item']; 
 		$this->currentItem->body = preg_replace_callback("/<\%media\((.*)\)%\>/Us", array(&$this, 'flvplayer'), $this->currentItem->body); 
 		$this->currentItem->more = preg_replace_callback("/<\%media\((.*)\)%\>/Us", array(&$this, 'flvplayer'), $this->currentItem->more); 
 	} 
