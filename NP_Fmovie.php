@@ -5,8 +5,8 @@ class NP_Fmovie extends NucleusPlugin
 
 	function getName() { return 'Fmovie'; }
 	function getAuthor() { return 'tokitake'; }
-	function getURL() { return 'http://www.fukulog.com/'; }
-	function getVersion() { return '0.2'; }
+	function getURL() { return 'https://github.com/NucleusCMS/NP_Fmovie'; }
+	function getVersion() { return '0.3'; }
 	
 	function getDescription() {
 		return 'FLV movie play';
